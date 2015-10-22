@@ -47,6 +47,7 @@
     - spark-shell
     - spark-sql
     - spark-submit
+    - sparkR
 
 - name: Configure Spark environment
   template: src=spark-env.sh.j2
