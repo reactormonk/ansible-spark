@@ -1,0 +1,15 @@
+---
+- name: Reload systemd 
+  command: "systemctl daemon-reload"
+
+- name: Restart Spark slave
+  service:
+    name: spark-slave
+    enabled: yes
+    state: restarted
+
+- name: Restart Spark master
+  service:
+    name: spark-master
+    enabled: yes
+    state: restarted
