@@ -64,4 +64,3 @@
   notify:
     - Reload systemd
     - "Restart Spark {{ spark_role }}"
-  when: spark_role
