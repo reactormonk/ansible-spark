@@ -2,7 +2,7 @@
 Description=Spark Slave
 
 [Service]
-ExecStart=/usr/lib/spark/sbin/start-slave.sh {{ spark_master_url }}
+ExecStart=/usr/bin/R CMD javareconf -e "/usr/lib/spark/sbin/start-slave.sh {{ spark_master_url }}"
 ExecStop=/usr/lib/spark/sbin/stop-slave.sh
 Type=forking
 PIDFile=/run/spark/spark-spark-org.apache.spark.deploy.worker.Worker-1.pid

@@ -2,7 +2,7 @@
 Description=Spark Master
 
 [Service]
-ExecStart=/usr/lib/spark/sbin/start-master.sh
+ExecStart=/usr/bin/R CMD javareconf -e "/usr/lib/spark/sbin/start-master.sh"
 ExecStop=/usr/lib/spark/sbin/stop-master.sh
 Type=forking
 PIDFile=/run/spark/spark-spark-org.apache.spark.deploy.master.Master-1.pid
