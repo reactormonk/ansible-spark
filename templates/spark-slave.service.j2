@@ -1,5 +1,6 @@
 [Unit]
 Description=Spark Slave
+After=network.target
 
 [Service]
 ExecStart=/usr/bin/R CMD javareconf -e "/usr/lib/spark/sbin/start-slave.sh {{ spark_master_url }}"
